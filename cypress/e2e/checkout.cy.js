@@ -1,0 +1,19 @@
+describe('Checkout', () => {
+
+    it('Login com credenciais válidas', () => {
+      cy.visit('https://www.saucedemo.com/v1/index.html')
+      cy.get('[data-test="username"]').type('standard_user')
+      cy.get('[data-test="password"]').type('secret_sauce')
+      cy.get('#login-button').click()
+      cy.wait(1000) 
+      cy.get(':nth-child(1) > .pricebar > .btn_primary').click()
+      cy.get('.fa-layers-counter').click()
+      cy.get('.btn_action').click()
+      cy.get('[data-test="firstName"]').type('joao')
+      cy.get('[data-test="lastName"]').type('manoel')
+      cy.get('[data-test="postalCode"]').type('0000-000')
+      cy.wait(1000)
+      cy.get('.btn_primary').click()
+      cy.get('.btn_action').click()
+     })
+  })
