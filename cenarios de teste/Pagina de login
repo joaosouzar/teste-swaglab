@@ -1,0 +1,48 @@
+Casos de testes (página de Login)
+
+Pré requisito.
+- Estar na página de Login.
+
+Dados
+- Username: standard_user
+- Password: secret_sauce
+
+CT01 (Login com sucesso)
+
+-> Dado que o usuário esta na página de Login,
+-> Quando preencher o campo "Username",
+-> E preencher o campo "password",
+-> E clicar no botão "Login",
+-> Então o login deve ser efetuado
+
+* Resultado esperado: Login com sucesso.
+
+CT02 (Login com username em letras maiúsculas)
+
+-> Dado que o usuário esta na página de Login,
+-> Quando preencher o campo "Username" com letras maiúsculas,
+-> E preencher o campo "password",
+-> E clicar no botão "Login",
+-> Então o login não deve ser efetuado.
+
+* Resultado esperado: Aparecer mensagem "Epic sadface: Username do not match any user in this service".
+
+CT03 (Login com username em branco)
+
+-> Dado que o usuário esta na página de Login,
+-> Quando não preencher o campo "Username",
+-> E preencher o campo "password",
+-> E clicar no botão "Login",
+-> Então o login não deve ser efetuado.
+
+* Resultado esperado: Aparecer mensagem "Epic sadface: Username is required".
+
+CT04 (Login com password em branco)
+
+-> Dado que o usuário esta na página de Login,
+-> Quando preencher o campo "Username",
+-> E não preencher o campo "password",
+-> E clicar no botão "Login",
+-> Então o login não deve ser efetuado.
+
+* Resultado esperado: Aparecer mensagem "Epic sadface: Password is required".

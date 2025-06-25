@@ -4,6 +4,7 @@ describe('Checkout', () => {
       cy.visit('https://www.saucedemo.com/v1/index.html')
       cy.get('[data-test="username"]').type('standard_user')
       cy.get('[data-test="password"]').type('secret_sauce')
+      cy.xpath("//input[@id='login-button']")
       cy.get('#login-button').click()
       cy.wait(1000) 
       cy.get(':nth-child(1) > .pricebar > .btn_primary').click()
