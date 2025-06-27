@@ -46,3 +46,13 @@ CT04 (Login com password em branco)
 -> Então o login não deve ser efetuado.
 
 * Resultado esperado: Aparecer mensagem "Epic sadface: Password is required".
+
+CT05 (Login com password inválida)
+
+-> Dado que o usuário esta na página de Login,
+-> Quando preencher o campo "Username",
+-> E não preencher o campo "password" incorreto,
+-> E clicar no botão "Login",
+-> Então o login não deve ser efetuado.
+
+* Resultado esperado: Aparecer mensagem "Epic sadface: Username and password do not match any user in this service"
