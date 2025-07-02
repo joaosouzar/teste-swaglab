@@ -1,0 +1,17 @@
+Casos de testes (Adicionar ao carrinho)
+
+Pré requisito.
+- Estar logado na página 'https://www.saucedemo.com/v1/index.html'.
+
+Dados
+- Username: standard_user
+- Password: secret_sauce
+
+CT01 (Adicionar iten ao carrinho)
+
+-> Dado que o usuário está na página de inventário,
+-> Quando escolher o objeto desejado,
+-> E clicar no botão "add to card",
+-> Então o objeto deve ser adicionado ao carrinho.
+
+* Resultado esperado: o objeto escolhido deve ser adcionado ao carrinho.
